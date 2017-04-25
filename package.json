@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/michael-sd/twitbot/issues"
   },
-  "homepage": "https://github.com/michael-sd/twitbot#readme"
+  "homepage": "https://github.com/michael-sd/twitbot#readme",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
 }
