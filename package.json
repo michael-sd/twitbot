@@ -1,0 +1,24 @@
+{
+  "name": "twitbot",
+  "version": "1.0.0",
+  "description": "Twitter bot built in NodeJS",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-sd/twitbot.git"
+  },
+  "keywords": [
+    "nodejs",
+    "twitter",
+    "api"
+  ],
+  "author": "Michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michael-sd/twitbot/issues"
+  },
+  "homepage": "https://github.com/michael-sd/twitbot#readme"
+}
