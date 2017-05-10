@@ -6,7 +6,7 @@ var config = require('./config');
 var T = new Twit(config);
 
 var params = {
-  q: 'unicat', count: 100
+  q: 'unicat', count: 10
 }
 
 T.get('search/tweets', params, gotData);
