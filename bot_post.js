@@ -12,5 +12,10 @@ var tweet = {
 T.post('statuses/update', tweet, tweeted);
 
 function tweeted(err, data, response) {
-  console.log(data)
+  if (err) {
+    console.log("Something went wrong!");
+  }
+  else {
+    console.log("It worked!");
+  }
 }
