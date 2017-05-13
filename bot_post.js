@@ -20,12 +20,10 @@ function followed(eventMsg) {
 tweetIt();
 setInterval(tweetIt, 1000*60*60); // set the tweetIt function to be triggered every hour
 
-function tweetIt() {
-
-  var r = Math.floor(Math.random()*100);
-
+function tweetIt(txt) {
+  
   var tweet = {
-    status: 'here is a random number' + r + ' #nyancatislife'
+    status: txt
   }
 
   T.post('statuses/update', tweet, tweeted);
