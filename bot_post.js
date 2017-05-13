@@ -5,6 +5,12 @@ var Twit = require('twit');
 var config = require('./config');
 var T = new Twit(config);
 
+// setting up user stream
+var stream = T.stream('user');
+
+// based on the case of anytime someone follows me
+stream.on('follow', followed);
+
 tweetIt();
 setInterval(tweetIt, 1000*60*60); // set the tweetIt function to be triggered every hour
 
