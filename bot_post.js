@@ -11,6 +11,12 @@ var stream = T.stream('user');
 // based on the case of anytime someone follows me
 stream.on('follow', followed);
 
+function followed(eventMsg) {
+  var name = eventMsg.source.name;
+  var screenName = eventMsg.source.screen_name;
+  tweetIt('@' + screenName + ' thanks for the follow!');
+}
+
 tweetIt();
 setInterval(tweetIt, 1000*60*60); // set the tweetIt function to be triggered every hour
 
