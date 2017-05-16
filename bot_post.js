@@ -9,9 +9,9 @@ var T = new Twit(config);
 var stream = T.stream('user');
 
 // based on the case of anytime someone follows me
-stream.on('follow', followed);
+stream.on('tweet', tweetEvent);
 
-function followed(eventMsg) {
+function tweetEvent(eventMsg) {
   var name = eventMsg.source.name;
   var screenName = eventMsg.source.screen_name;
   tweetIt('.@' + screenName + ' thanks for the follow!');
