@@ -1,4 +1,4 @@
-console.log('The bot is starting')
+console.log('The replier bot is starting')
 
 var Twit = require('twit');
 
@@ -8,13 +8,14 @@ var T = new Twit(config);
 // setting up user stream
 var stream = T.stream('user');
 
-// based on the case of anytime someone follows me
+// based on the case of anytime someone tweets at me
 stream.on('tweet', tweetEvent);
 
+// writes tweet data to a json file
 function tweetEvent(eventMsg) {
-  var name = eventMsg.source.name;
-  var screenName = eventMsg.source.screen_name;
-  tweetIt('.@' + screenName + ' thanks for the follow!');
+  var fs = require('fs');
+  var json = JSON.stringify(eventMsg, null, 2);
+  fs.writefile("tweet.json",json);
 }
 
 tweetIt();
