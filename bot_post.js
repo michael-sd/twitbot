@@ -13,9 +13,16 @@ stream.on('tweet', tweetEvent);
 
 // writes tweet data to a json file
 function tweetEvent(eventMsg) {
-  var fs = require('fs');
-  var json = JSON.stringify(eventMsg, null, 2);
-  fs.writefile("tweet.json",json);
+  // var fs = require('fs');
+  // var json = JSON.stringify(eventMsg, null, 2);
+  // fs.writefile("tweet.json",json);
+
+  console.log(replyto + '' + from);
+
+  if (replyto === 'adoboapi') {
+    var newtweet = '@' + from + ' thank you for tweeting me';
+    tweetIt(newtweet);
+  }
 }
 
 tweetIt();
